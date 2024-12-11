@@ -1,0 +1,521 @@
+/* Reset default styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure full viewport coverage */
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Home component styles */
+  .home-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  .button-container {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    margin-left: 14rem;
+    
+  }
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    border-bottom-left-radius: 60% 25%;
+    border-bottom-right-radius: 60% 25%;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: transparent;  /* No background */
+    color: #000;  /* Set text color */
+    font-weight: 600;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    color: #333;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-button:hover {
+    background-color: #fff;
+    color: #000;
+    outline: 2px solid #000;
+  }
+  
+  /* Features Section */
+  .features-section {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .features-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Marketplace Section */
+  .marketplace-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .marketplace-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .marketplace-section p {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    color: #333;
+  }
+  
+  .marketplace-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .action-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .action-button:hover {
+    background-color: #fff;
+    color: #000;
+    outline: 2px solid #000;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .features-section h2,
+    .marketplace-section h2 {
+      font-size: 2rem;
+    }
+  
+    .cta-button {
+      padding: 1rem 1.5rem;
+    }
+  
+    .feature-card {
+      padding: 1.5rem;
+    }
+  }
+  /* From Uiverse.io by gharsh11032000 */ 
+.card {
+    width: 320px;
+    height: 350px;
+    padding: 20px;
+    color: white;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 10px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transform-origin: right bottom;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card .main-content {
+    flex: 1;
+  }
+  
+  .card .header span:first-child {
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
+  }
+  
+  .card .heading {
+    font-size: 24px;
+    margin: 24px 0 16px;
+    font-weight: 600;
+  }
+  
+  .card .categories {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .card .categories span {
+    background-color: #e81cff;
+    padding: 4px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 100em;
+  }
+  
+  .card .footer {
+    font-weight: 600;
+    color: #717171;
+    margin-right: 4px;
+  }
+  
+  .card:hover {
+    rotate: 8deg;
+  }
+  /* Button Styles */
+.custom-button {
+    background-color: #000000; /* Dark red */
+    color: #ffffff; /* Light red */
+    border: 2px solid #ffffff;
+    border-bottom: 4px solid #000000;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem; /* Rounded edges */
+    position: relative;
+    overflow: hidden; /* For highlight effect */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    filter: brightness(1.2);
+    border-top-width: 4px;
+    border-bottom-width: 2px;
+  }
+  
+  .custom-button:active {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+  
+  /* Highlight Effect */
+  .custom-button-highlight {
+    background-color: #ffffff; /* Light red */
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -150%;
+    left: 0;
+    width: 300%;
+    height: 5px;
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: top 0.5s ease;
+  }
+  
+  .custom-button:hover .custom-button-highlight {
+    top: 150%;
+  }
+  /* From Uiverse.io by JkHuger */ 
+.sparkle-button {
+    --active: 0;
+    --bg: radial-gradient(
+              40% 50% at center 100%,
+              hsl(270 calc(var(--active) * 97%) 72% / var(--active)),
+              transparent
+          ),
+          radial-gradient(
+              80% 100% at center 120%,
+              hsl(260 calc(var(--active) * 97%) 70% / var(--active)),
+              transparent
+          ),
+          hsl(260 calc(var(--active) * 97%) calc((var(--active) * 44%) + 12%));
+    background: var(--bg);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    white-space: nowrap;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 0 0 calc(var(--active) * 3em) calc(var(--active) * 1em) hsl(260 97% 61% / 0.75),
+          0 0em 0 0 hsl(260 calc(var(--active) * 97%) calc((var(--active) * 50%) + 30%)) inset,
+          0 -0.05em 0 0 hsl(260 calc(var(--active) * 97%) calc(var(--active) * 60%)) inset;
+    transition: box-shadow var(--transition), scale var(--transition), background var(--transition);
+    scale: calc(1 + (var(--active) * 0.1));
+    transition: .3s;
+  }
+  
+  .sparkle-button:active {
+    scale: 1;
+    transition: .3s;
+  }
+  
+  .sparkle path {
+    color: hsl(0 0% calc((var(--active, 0) * 70%) + var(--base)));
+    transform-box: fill-box;
+    transform-origin: center;
+    fill: currentColor;
+    stroke: currentColor;
+    animation-delay: calc((var(--transition) * 1.5) + (var(--delay) * 1s));
+    animation-duration: 0.6s;
+    transition: color var(--transition);
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) path {
+    animation-name: bounce;
+  }
+  
+  @keyframes bounce {
+    35%, 65% {
+      scale: var(--scale);
+    }
+  }
+  
+  .sparkle path:nth-of-type(1) {
+    --scale: 0.5;
+    --delay: 0.1;
+    --base: 40%;
+  }
+  
+  .sparkle path:nth-of-type(2) {
+    --scale: 1.5;
+    --delay: 0.2;
+    --base: 20%;
+  }
+  
+  .sparkle path:nth-of-type(3) {
+    --scale: 2.5;
+    --delay: 0.35;
+    --base: 30%;
+  }
+  
+  .sparkle-button:before {
+    content: "";
+    position: absolute;
+    inset: -0.2em;
+    z-index: -1;
+    border: 0.25em solid hsl(260 97% 50% / 0.5);
+    border-radius: 100px;
+    opacity: var(--active, 0);
+    transition: opacity var(--transition);
+  }
+  
+  .spark {
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    rotate: 0deg;
+    overflow: hidden;
+    mask: linear-gradient(white, transparent 50%);
+    animation: flip calc(var(--spark) * 2) infinite steps(2, end);
+  }
+  
+  @keyframes flip {
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  .spark:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    top: 0%;
+    left: 50%;
+    z-index: -1;
+    translate: -50% -15%;
+    rotate: 0;
+    transform: rotate(-90deg);
+    opacity: calc((var(--active)) + 0.4);
+    background: conic-gradient(
+          from 0deg,
+          transparent 0 340deg,
+          white 360deg
+      );
+    transition: opacity var(--transition);
+    animation: rotate var(--spark) linear infinite both;
+  }
+  
+  .spark:after {
+    content: "";
+    position: absolute;
+    inset: var(--cut);
+    border-radius: 100px;
+  }
+  
+  .backdrop {
+    position: absolute;
+    inset: var(--cut);
+    background: var(--bg);
+    border-radius: 100px;
+    transition: background var(--transition);
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  
+  @supports(selector(:has(:is(+ *)))) {
+    body:has(button:is(:hover, :focus-visible)) {
+      --active: 1;
+      --play-state: running;
+    }
+  
+    .bodydrop {
+      display: none;
+    }
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) ~ :is(.bodydrop, .particle-pen) {
+    --active: 1;
+    --play-state: runnin;
+  }
+  
+  .sparkle-button:is(:hover, :focus-visible) {
+    --active: 1;
+    --play-state: running;
+  }
+  
+  .sp {
+    position: relative;
+  }
+  
+  .particle-pen {
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    -webkit-mask: radial-gradient(white, transparent 65%);
+    z-index: -1;
+    opacity: var(--active, 0);
+    transition: opacity var(--transition);
+  }
+  
+  .particle {
+    fill: white;
+    width: calc(var(--size, 0.25) * 1rem);
+    aspect-ratio: 1;
+    position: absolute;
+    top: calc(var(--y) * 1%);
+    left: calc(var(--x) * 1%);
+    opacity: var(--alpha, 1);
+    animation: float-out calc(var(--duration, 1) * 1s) calc(var(--delay) * -1s) infinite linear;
+    transform-origin: var(--origin-x, 1000%) var(--origin-y, 1000%);
+    z-index: -1;
+    animation-play-state: var(--play-state, paused);
+  }
+  
+  .particle path {
+    fill: hsl(0 0% 90%);
+    stroke: none;
+  }
+  
+  .particle:nth-of-type(even) {
+    animation-direction: reverse;
+  }
+  
+  @keyframes float-out {
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  .text {
+    translate: 2% -6%;
+    letter-spacing: 0.01ch;
+    font-color:#ffffff
+  }
+  
+  .sparkle-button svg {
+    inline-size: 1.25em;
+    translate: -25% -5%;
+  }

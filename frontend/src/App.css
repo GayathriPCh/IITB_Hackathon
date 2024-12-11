@@ -1,4 +1,7 @@
-/* General reset and body styling */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;/* General reset and body styling */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
