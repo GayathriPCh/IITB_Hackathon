@@ -9,9 +9,13 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "proxy": "https://xumm.app",
   "dependencies": {
+    "antd": "^5.22.4",
     "axios": "^1.7.9",
+    "config": "^3.3.12",
     "frontend": "file:",
+    "moralis": "^2.27.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.2",
