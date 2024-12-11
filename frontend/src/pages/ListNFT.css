@@ -1,0 +1,99 @@
+.list-nft-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-nft-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  
+  .loading, .no-tickets {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+  }
+  
+  .ticket-card {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .ticket-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ticket-details {
+    padding: 20px;
+  }
+  
+  .ticket-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .ticket-info {
+    display: grid;
+    gap: 8px;
+  }
+  
+  .ticket-info p {
+    color: #444;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .ticket-info p:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .list-nft-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .tickets-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .ticket-card {
+      max-width: 100%;
+    }
+  }
+  

@@ -11,10 +11,10 @@ const airlineData = {
       destinations: ["Mumbai", "Delhi", "Bangalore", "Chennai"],
       nftImages: {
         "Economy": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
-          "Bangalore": "ipfs://bafkreibudiaxxtzdoqdqwuscou2i44zlsmt65ytxndjfp276xdmbozcy44",
-          "Chennai": "ipfs://bafkreig3n3b6q66jvxoqn2nspxfrnc57cjlyhwmtsd4x36nflseofaogka"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "https://ipfs.io/ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+          "Bangalore": "https://ipfs.io/ipfs://bafkreibudiaxxtzdoqdqwuscou2i44zlsmt65ytxndjfp276xdmbozcy44",
+          "Chennai": "https://ipfs.io/ipfs://bafkreig3n3b6q66jvxoqn2nspxfrnc57cjlyhwmtsd4x36nflseofaogka"
         }
       }
     },
@@ -23,16 +23,16 @@ const airlineData = {
       destinations: ["Mumbai", "Delhi", "Dubai", "Bangkok"],
       nftImages: {
         "Economy": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
-            "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
-            "Bangkok": "ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "https://ipfs.io/ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+            "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
+            "Bangkok": "https://ipfs.io/ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
         },
         "Business": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
-            "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
-            "Bangkok": "ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "https://ipfs.io/ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+            "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
+            "Bangkok": "https://ipfs.io/ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
         }
       }
     },
@@ -41,22 +41,22 @@ const airlineData = {
       destinations: ["Mumbai", "New York", "Singapore", "Dubai"],
       nftImages: {
         "Economy": {
-          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+          "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         },
         "Business": {
-          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+          "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         },
         "First": {
-          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+          "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         }
       }
     },
@@ -65,22 +65,22 @@ const airlineData = {
       destinations: ["Mumbai", "New York", "Singapore", "Dubai"],
       nftImages: {
         "Economy": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         },
         "Premium Economy": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         },
         "Business": {
-            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
-           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
-          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
-          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+            "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "https://ipfs.io/ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "https://ipfs.io/ipfs://bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "https://ipfs.io/ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
         }
       }
     }
