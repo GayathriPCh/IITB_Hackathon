@@ -1,0 +1,147 @@
+/* General reset and body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Light text color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #f9f9f9; /* Light text color */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: #333; /* Light mode background */
+  color: white;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for navbar color */
+}
+
+.navbar.dark-mode {
+  background-color: #222; /* Dark mode background */
+  color: #f9f9f9; /* Light text color */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffa500;
+}
+
+.navbar .wallet-button {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .wallet-button:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
+/* Dark mode wallet button styles */
+.navbar.dark-mode .wallet-button {
+  background-color: #444; /* Dark mode button background */
+  color: #f9f9f9; /* Light text color for the button */
+}
+
+.navbar.dark-mode .wallet-button:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
+/* Content container styling */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 60px; /* Moves content slightly up */
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for content color */
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Dark mode content styles */
+body.dark-mode .content h1,
+body.dark-mode .content p {
+  color: #f9f9f9; /* Light text color for content */
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    margin: 10px 5px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
