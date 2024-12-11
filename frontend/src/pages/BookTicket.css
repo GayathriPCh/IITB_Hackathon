@@ -1,0 +1,112 @@
+.booking-form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-form-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  
+  .booking-form {
+    display: grid;
+    gap: 24px;
+  }
+  
+  .booking-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .booking-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .booking-form select,
+  .booking-form input {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .booking-form select:focus,
+  .booking-form input:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-submit-btn {
+    margin-top: 20px;
+    padding: 16px 32px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .booking-submit-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  
+  .booking-submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .booking-success {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .booking-success h2 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .booking-success p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-form-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .booking-form-container h1 {
+      font-size: 2rem;
+    }
+  
+    .booking-submit-btn {
+      width: 100%;
+    }
+  }
+  

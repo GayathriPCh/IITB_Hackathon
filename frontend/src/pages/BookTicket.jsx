@@ -2,10 +2,89 @@ import { useState } from 'react';
 import { convertStringToHex } from 'xrpl';
 import { useAccount } from '../components/AccountProvider';
 import { Xumm } from 'xumm';
-
+import './BookTicket.css';
 // Initialize Xumm SDK (replace with your API key)
 const xumm = new Xumm('c5973057-149c-4008-a867-70d71fc5dc29');
-
+const airlineData = {
+    "Indigo": {
+      classes: ["Economy"],
+      destinations: ["Mumbai", "Delhi", "Bangalore", "Chennai"],
+      nftImages: {
+        "Economy": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+          "Bangalore": "ipfs://bafkreibudiaxxtzdoqdqwuscou2i44zlsmt65ytxndjfp276xdmbozcy44",
+          "Chennai": "ipfs://bafkreig3n3b6q66jvxoqn2nspxfrnc57cjlyhwmtsd4x36nflseofaogka"
+        }
+      }
+    },
+    "SpiceJet": {
+      classes: ["Economy", "Business"],
+      destinations: ["Mumbai", "Delhi", "Dubai", "Bangkok"],
+      nftImages: {
+        "Economy": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+            "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
+            "Bangkok": "ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
+        },
+        "Business": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+            "Delhi": "ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
+            "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy",
+            "Bangkok": "ipfs://bafkreiacikgv6ikyeabgx2tvnuxqktypmayy2pcnqpg4j7am3xvl2y33i4"
+        }
+      }
+    },
+    "Air India": {
+      classes: ["Economy", "Business", "First"],
+      destinations: ["Mumbai", "New York", "Singapore", "Dubai"],
+      nftImages: {
+        "Economy": {
+          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        },
+        "Business": {
+          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        },
+        "First": {
+          "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+          "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        }
+      }
+    },
+    "Vistara": {
+      classes: ["Economy", "Premium Economy", "Business"],
+      destinations: ["Mumbai", "New York", "Singapore", "Dubai"],
+      nftImages: {
+        "Economy": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        },
+        "Premium Economy": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        },
+        "Business": {
+            "Mumbai": "ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
+           "New York": "ipfs://bafkreihwdztyezhq4ghs4p6zrowdcbdk6627x6jg7ez2iztl7s4o2mp6di",
+          "Singapore": "bafybeifimudsnqinclimgeqgxhx4lgtkbob5g25zw677icau5y6bnvowri",
+          "Dubai": "ipfs://bafkreido6o6bya2wzpgfgk5rzfwabvot4bga3vv2ztek33qpslwl4bjhgy"
+        }
+      }
+    }
+  };
 const BookTicket = () => {
   const { account } = useAccount();
   const [flightDetails, setFlightDetails] = useState({
@@ -26,23 +105,14 @@ const BookTicket = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!account) {
       alert('Please connect your wallet to book the ticket.');
       return;
     }
-
+    
     setIsBooking(true);
-
-    const nftMetadata = JSON.stringify({
-      airline: flightDetails.airline,
-      flightClass: flightDetails.flightClass,
-      seatNumber: flightDetails.seatNumber,
-      departure: flightDetails.departure,
-      arrival: flightDetails.arrival,
-      date: flightDetails.date,
-    });
-
+    const nftImage = airlineData[flightDetails.airline].nftImages[flightDetails.flightClass][flightDetails.arrival];
+    
     try {
       const payload = await xumm.payload.create({
         txjson: {
@@ -50,17 +120,24 @@ const BookTicket = () => {
           Account: account,
           NFTokenTaxon: 0,
           Flags: 8,
-          URI: convertStringToHex(nftMetadata),
+          // Use the image URI directly instead of full metadata
+          URI: convertStringToHex(nftImage),
           TransferFee: 0,
           Memos: [
             {
               Memo: {
-                MemoType: convertStringToHex('FlightTicket'),
-                MemoData: convertStringToHex(nftMetadata),
-              },
+                MemoType: convertStringToHex('Name'),
+                MemoData: convertStringToHex(`${flightDetails.airline} Flight #${flightDetails.seatNumber}`)
+              }
             },
-          ],
-        },
+            {
+              Memo: {
+                MemoType: convertStringToHex('Details'),
+                MemoData: convertStringToHex(JSON.stringify(flightDetails))
+              }
+            }
+          ]
+        }
       });
 
       // Subscribe to the payload without raising unnecessary errors
@@ -85,10 +162,10 @@ const BookTicket = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Book Your Flight Ticket</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="booking-form-container">
+  <h1>Book Your Flight Ticket</h1>
+  <form className="booking-form" onSubmit={handleSubmit}>
+    <div className="booking-form-group">
           <label>Airline:</label>
           <select
             name="airline"
@@ -97,10 +174,9 @@ const BookTicket = () => {
             required
           >
             <option value="">Select Airline</option>
-            <option value="Airline1">Airline1</option>
-            <option value="Airline2">Airline2</option>
-            <option value="Airline3">Airline3</option>
-            <option value="Airline4">Airline4</option>
+            {Object.keys(airlineData).map((airline) => (
+              <option key={airline} value={airline}>{airline}</option>
+            ))}
           </select>
         </div>
         <div>
@@ -112,9 +188,9 @@ const BookTicket = () => {
             required
           >
             <option value="">Select Class</option>
-            <option value="Economy">Economy</option>
-            <option value="Business">Business</option>
-            <option value="First">First Class</option>
+            {flightDetails.airline && airlineData[flightDetails.airline].classes.map((cls) => (
+              <option key={cls} value={cls}>{cls}</option>
+            ))}
           </select>
         </div>
         <div>
@@ -156,10 +232,10 @@ const BookTicket = () => {
             required
           >
             <option value="">Select Arrival Location</option>
-            <option value="LHR">LHR - London</option>
-            <option value="DXB">DXB - Dubai</option>
-            <option value="CDG">CDG - Paris</option>
-            <option value="FRA">FRA - Frankfurt</option>
+            <option value="">Select Arrival Location</option>
+            {flightDetails.airline && airlineData[flightDetails.airline].destinations.map((dest) => (
+              <option key={dest} value={dest}>{dest}</option>
+            ))}
           </select>
         </div>
         <div>
@@ -173,18 +249,18 @@ const BookTicket = () => {
           />
         </div>
 
-        <button type="submit" disabled={isBooking}>
-          {isBooking ? 'Booking...' : 'Book Ticket'}
-        </button>
+        <button className="booking-submit-btn" type="submit" disabled={isBooking}>
+      {isBooking ? 'Booking...' : 'Book Ticket'}
+    </button>
       </form>
 
       {minted && (
-        <div style={{ marginTop: '20px' }}>
-          <h2>Ticket Minted Successfully!</h2>
-          <p>Your NFT ticket has been successfully booked and minted. You can now view it in your wallet.</p>
-        </div>
-      )}
+    <div className="booking-success">
+      <h2>Ticket Minted Successfully!</h2>
+      <p>Your NFT ticket has been successfully booked and minted.</p>
     </div>
+  )}
+</div>
   );
 };
 
