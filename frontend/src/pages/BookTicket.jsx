@@ -114,31 +114,26 @@ const BookTicket = () => {
     const nftImage = airlineData[flightDetails.airline].nftImages[flightDetails.flightClass][flightDetails.arrival];
     
     try {
-      const payload = await xumm.payload.create({
-        txjson: {
-          TransactionType: 'NFTokenMint',
-          Account: account,
-          NFTokenTaxon: 0,
-          Flags: 8,
-          // Use the image URI directly instead of full metadata
-          URI: convertStringToHex(nftImage),
-          TransferFee: 0,
-          Memos: [
-            {
-              Memo: {
-                MemoType: convertStringToHex('Name'),
-                MemoData: convertStringToHex(`${flightDetails.airline} Flight #${flightDetails.seatNumber}`)
-              }
-            },
-            {
-              Memo: {
-                MemoType: convertStringToHex('Details'),
-                MemoData: convertStringToHex(JSON.stringify(flightDetails))
-              }
+        const payload = await xumm.payload.create({
+            txjson: {
+              TransactionType: 'NFTokenMint',
+              Account: account,
+              NFTokenTaxon: 0,
+              Flags: 8,
+              URI: convertStringToHex(JSON.stringify({
+                name: `${flightDetails.airline} Flight #${flightDetails.seatNumber}`,
+                image: nftImage,
+                airline: flightDetails.airline,
+                flightClass: flightDetails.flightClass,
+                seatNumber: flightDetails.seatNumber,
+                departure: flightDetails.departure,
+                arrival: flightDetails.arrival,
+                date: flightDetails.date
+              })),
+              TransferFee: 0
             }
-          ]
-        }
-      });
+          });
+      
 
       // Subscribe to the payload without raising unnecessary errors
       const payloadResult = await xumm.payload.createAndSubscribe(payload);
