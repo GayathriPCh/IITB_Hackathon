@@ -4,7 +4,7 @@ import { useAccount } from '../components/AccountProvider';
 import { Xumm } from 'xumm';
 import './BookTicket.css';
 // Initialize Xumm SDK (replace with your API key)
-const xumm = new Xumm('c5973057-149c-4008-a867-70d71fc5dc29');
+const xumm = new Xumm('12dc0572-11ea-4cfa-92c1-4c827991fa73');
 const airlineData = {
     "Indigo": {
       classes: ["Economy"],
@@ -13,8 +13,8 @@ const airlineData = {
         "Economy": {
             "Mumbai": "https://ipfs.io/ipfs://bafkreifqaj3f2xexgdz7duf5f7bjuhexxtunmqk27bx6p76sf32n4vr3wi",
             "Delhi": "https://ipfs.io/ipfs://bafkreicrayb6tbti6lbe32lueztelylpcpt7nz2rgawtdanvnsj47actyi",
-          "Bangalore": "https://ipfs.io/ipfs://bafkreibudiaxxtzdoqdqwuscou2i44zlsmt65ytxndjfp276xdmbozcy44",
-          "Chennai": "https://ipfs.io/ipfs://bafkreig3n3b6q66jvxoqn2nspxfrnc57cjlyhwmtsd4x36nflseofaogka"
+            "Bangalore": "https://ipfs.io/ipfs://bafkreibudiaxxtzdoqdqwuscou2i44zlsmt65ytxndjfp276xdmbozcy44",
+            "Chennai": "https://ipfs.io/ipfs://bafkreig3n3b6q66jvxoqn2nspxfrnc57cjlyhwmtsd4x36nflseofaogka"
         }
       }
     },
