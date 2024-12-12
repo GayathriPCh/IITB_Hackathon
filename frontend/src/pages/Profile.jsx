@@ -40,22 +40,28 @@ const Profile = () => {
               
               // Check if URI is a direct IPFS link
               if (decodedUri.startsWith('ipfs://')) {
-                imageUrl = decodedUri.replace('ipfs://', 'https://ipfs.io/ipfs/');
-              } 
-              // Check if URI is JSON data
-              else if (decodedUri.startsWith('{')) {
-                details = JSON.parse(decodedUri);
-                // Handle IPFS link in image field
-                if (details.image?.startsWith('ipfs://')) {
-                  imageUrl = details.image.replace('ipfs://', 'https://ipfs.io/ipfs/');
-                } else {
-                  imageUrl = details.image;
-                }
-              }
-              // If URI is a direct HTTP link
-              else if (decodedUri.startsWith('http')) {
-                imageUrl = decodedUri;
-              }
+  // Replace 'ipfs://' with 'https://ipfs.io/ipfs/'
+  imageUrl = decodedUri.replace('ipfs://', 'https://ipfs.io/ipfs/');
+} else if (decodedUri.startsWith('{')) {
+  details = JSON.parse(decodedUri);
+  // Handle IPFS link in image field
+  if (details.image?.startsWith('ipfs://')) {
+    imageUrl = details.image.replace('ipfs://', 'https://ipfs.io/ipfs/');
+  } else if (details.image?.startsWith('https://ipfs.io/ipfs://')) {
+    // Remove extra colon and slash in IPFS link
+    imageUrl = details.image.replace('https://ipfs.io/ipfs://', 'https://ipfs.io/ipfs/');
+  } else {
+    imageUrl = details.image;
+  }
+} else if (decodedUri.startsWith('http')) {
+  if (decodedUri.startsWith('https://ipfs.io/ipfs://')) {
+    // Remove extra colon and slash in IPFS link
+    imageUrl = decodedUri.replace('https://ipfs.io/ipfs://', 'https://ipfs.io/ipfs/');
+  } else {
+    imageUrl = decodedUri;
+  }
+}
+
             } catch (e) {
               console.error('Error parsing URI:', e);
             }
