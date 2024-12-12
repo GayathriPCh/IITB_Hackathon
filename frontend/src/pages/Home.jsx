@@ -1,17 +1,21 @@
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Welcome to Aerotoken</h1>
-          <p className="hero-subtitle">Revolutionizing Flight Ticketing with Blockchain Technology</p>
+          <h1>Aerotoken</h1>
+          <p className="hero-subtitle">NFT-Based Flight Ticketing Application on XRP Ledger</p>
           <div className="button-container">
 
 <div className="sp">
 
-  <button className="sparkle-button">
+  <button className="sparkle-button"onClick={() => navigate('/book-ticket')}>
     <span className="spark"></span>
     
     <span className="backdrop"></span>
@@ -128,14 +132,14 @@ const Home = () => {
 
       {/* Marketplace Section */}
       <section className="marketplace-section">
-        <h2>NFT Ticket Marketplace</h2>
+        <h2>GET STARTED BY BOOKING A TICKET OR LISTING A RESALE</h2>
         <p>Buy, sell, or trade flight tickets securely on our decentralized platform . Also explore Travel Photo NFTs.</p>
         <div className="marketplace-actions">
-        <button className="custom-button">
+        <button className="custom-button"onClick={() => navigate('/book-ticket')}>
   <span className="custom-button-highlight"></span>
   Book your NFT Ticket
 </button>
-<button className="custom-button">
+<button className="custom-button"onClick={() => navigate('/list-nft')}>
   <span className="custom-button-highlight"></span>
   List for Resale
 </button>

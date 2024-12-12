@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAccount } from '../components/AccountProvider';
 import { Client } from 'xrpl';
-import './ListNFT.css';
+import './Profile.css';
 function convertHexToString(hex) {
   let str = '';
   for (let i = 0; i < hex.length; i += 2) {
