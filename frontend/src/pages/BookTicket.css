@@ -104,7 +104,53 @@
   }
   
   .booking-form-container h1 {
+<<<<<<< HEAD
     font-size: 2rem;
+=======
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 1000;
+    letter-spacing: -0.5px;
+    font-family: 'Tread';
+
+  }
+  
+  .booking-form {
+    display: grid;
+    gap: 24px;
+  }
+  
+  .booking-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .booking-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .booking-form select,
+  .booking-form input {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .booking-form select:focus,
+  .booking-form input:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+>>>>>>> a32421d52be7aa5a96bfcb51b10f571d31a527c1
   }
   
   .booking-submit-btn {

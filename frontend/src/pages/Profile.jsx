@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAccount } from '../components/AccountProvider';
 import { Client } from 'xrpl';
-import './ListNFT.css';
+import './Profile.css';
 function convertHexToString(hex) {
   let str = '';
   for (let i = 0; i < hex.length; i += 2) {
@@ -41,22 +41,22 @@ const Profile = () => {
               // Check if URI is a direct IPFS link
               if (decodedUri.startsWith('ipfs://')) {
   // Replace 'ipfs://' with 'https://ipfs.io/ipfs/'
-  imageUrl = decodedUri.replace('ipfs://', 'https://ipfs.io/ipfs/');
+  imageUrl = decodedUri.replace('ipfs://', 'https://gateway.pinata.cloud/ipfs/');
 } else if (decodedUri.startsWith('{')) {
   details = JSON.parse(decodedUri);
   // Handle IPFS link in image field
   if (details.image?.startsWith('ipfs://')) {
-    imageUrl = details.image.replace('ipfs://', 'https://ipfs.io/ipfs/');
+    imageUrl = details.image.replace('ipfs://', 'https://gateway.pinata.cloud/ipfs/');
   } else if (details.image?.startsWith('https://ipfs.io/ipfs://')) {
     // Remove extra colon and slash in IPFS link
-    imageUrl = details.image.replace('https://ipfs.io/ipfs://', 'https://ipfs.io/ipfs/');
+    imageUrl = details.image.replace('https://ipfs.io/ipfs://', 'https://gateway.pinata.cloud/ipfs/');
   } else {
     imageUrl = details.image;
   }
 } else if (decodedUri.startsWith('http')) {
   if (decodedUri.startsWith('https://ipfs.io/ipfs://')) {
     // Remove extra colon and slash in IPFS link
-    imageUrl = decodedUri.replace('https://ipfs.io/ipfs://', 'https://ipfs.io/ipfs/');
+    imageUrl = decodedUri.replace('https://ipfs.io/ipfs://', 'https://gateway.pinata.cloud/ipfs/');
   } else {
     imageUrl = decodedUri;
   }
