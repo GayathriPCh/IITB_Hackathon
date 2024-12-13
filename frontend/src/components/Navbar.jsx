@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import WalletConnect from './WalletConnect'; // Import your WalletConnect component
 import DarkToggle from './Darktoggle'; // Import your DarkToggle component
-import { useNavigate } from 'react-router-dom'; // Assuming you are using React Router for navigation
+import { useNavigate, Link } from 'react-router-dom'; // Assuming you are using React Router for navigation
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -68,31 +68,36 @@ const Navbar = () => {
       gap: '20px',
     }}
   >
-    {[{ name: 'Book Ticket', route: '/book-ticket' }, { name: 'List NFT', route: '/list-nft' }, { name: 'Profile', route: '/profile' }].map((item) => (
+    {[
+      { name: 'Book Ticket', route: '/book-ticket' }, 
+      { name: 'List NFT', route: '/list-nft' }, 
+      { name: 'Profile', route: '/profile' },
+      { name: 'Flight Search', route: '/flight-search' }
+    ].map((item) => (
       <button
-      key={item.name}
-      onClick={() => navigate(item.route)}
-      onMouseEnter={() => setHoveredButton(item.name)}
-      onMouseLeave={() => setHoveredButton(null)}
-      style={{
-        padding: '8px 16px',
-        background: hoveredButton === item.name ? '#444' : 'transparent',
-        border: '2px solid transparent',
-        borderRadius: '8px',
-        color: '#fff',
-        cursor: 'pointer',
-        fontWeight: 'bold',
-        fontSize: '1.2rem',
-        fontFamily: 'C',
-        transition: 'all 0.3s ease',
-        transform: hoveredButton === item.name ? 'scale(1.05)' : 'scale(1)',
-      }}
-      className="nav-button"
-    >
-      {item.name}
-    </button>
-  ))}
-</div>
+        key={item.name}
+        onClick={() => navigate(item.route)}
+        onMouseEnter={() => setHoveredButton(item.name)}
+        onMouseLeave={() => setHoveredButton(null)}
+        style={{
+          padding: '8px 16px',
+          background: hoveredButton === item.name ? '#444' : 'transparent',
+          border: '2px solid transparent',
+          borderRadius: '8px',
+          color: '#fff',
+          cursor: 'pointer',
+          fontWeight: 'bold',
+          fontSize: '1.2rem',
+          fontFamily: 'C',
+          transition: 'all 0.3s ease',
+          transform: hoveredButton === item.name ? 'scale(1.05)' : 'scale(1)',
+        }}
+        className="nav-button"
+      >
+        {item.name}
+      </button>
+    ))}
+  </div>
 
   {/* Right Section */}
   <div

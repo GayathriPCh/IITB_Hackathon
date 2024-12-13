@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import BookTicket from './pages/BookTicket';
 import ListNFT from './pages/ListNFT';
 import Profile from './pages/Profile';
+import FlightSearch from './pages/FlightSearch';
 import { AccountProvider } from './components/AccountProvider';
 import './App.css';
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/book-ticket" element={<BookTicket />} />
           <Route path="/list-nft" element={<ListNFT />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/flight-search" element={<FlightSearch />} />
         </Routes>
       </div>
     </Router>
