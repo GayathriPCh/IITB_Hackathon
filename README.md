@@ -1,6 +1,7 @@
 # AeroToken ( Flight Ticketing Decentralized Application on XRPL )
 It is an NFT-based flight ticketing application built on the XRP Ledger,<br/> 
 Project is deployed on https://iitb-hackathon-timl.vercel.app/
+![image](https://github.com/user-attachments/assets/6987a3bb-b4c2-4047-95d0-168c63c044fe)
 
 ## Steps to download and use XRPL using Xaman wallet
 1) Go to playstore and download Xaman
